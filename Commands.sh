@@ -5,6 +5,9 @@ ip r |grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"
 ip neigh
 arp -n
 
+#my ip
+curl ipconfig.me
+
 #use macchanger
 
 #change default gateway
@@ -19,3 +22,6 @@ sudo ifconfig eth0 192.168.0.1 netmask 255.255.255.0
 #command to send Gratuitous ARP  to specific computer
 #how to test if the ARP command work. (send a gratious ARP to the client, asking for the MAC table/my MAC address
 #poison only 1 computer, not the router.
+
+#Scan all hosts on network
+sudo arp-scan -l --interface=wlan0
